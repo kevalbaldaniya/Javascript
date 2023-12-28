@@ -1,0 +1,34 @@
+<html>
+<body> 
+    NO1 <input type="text" name="num1" ><br/><br/>
+    NO2 <input type="text" name="num2" ><br/></br/>
+    NO3 <input type="text" name="num3" ><br/><br/>
+    <button onclick="myfuction()" value="smallest numbar">Show</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfuction() {
+            var num1 = document.getElementsByName('num1')[0].value;
+            var num2 = document.getElementsByName('num2')[0].value;
+            var num3 = document.getElementsByName('num3')[0].value;
+        
+
+            if (num1 < num2 && num1 < num3) {
+                ans = num1;
+            }
+
+            if (num2 < num1 && num2 < num3) {
+                ans = num2;
+            }
+
+            if(num3 < num1 ) {
+               ans = num3;
+            }
+
+            document.getElementById('demo').innerHTML = '<b>The smallest number is:<b/>' + ans;
+        }
+         
+    </script>
+</body>
+</html>
+

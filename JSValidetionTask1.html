@@ -1,0 +1,74 @@
+<html>
+    <body>
+        <form name="frm" onsubmit="return ValidateForm()">
+            Enter Name: <input type="text" name="name"><br/><br/>
+
+            Enter Mobaile No : <input type="text" name="mobile"><br/><br/>
+    
+            Gender : <input type="radio" name="gender" value="M">Male
+            <input type="radio" name="gender" value="F">Female<br/><br/>
+        
+            Hobby : <input type="checkbox" name="hobby" value="Reading">Reading
+            <input type="checkbox" name="hobby" value="Dancing">Dancing
+            <input type="checkbox" name="hobby" value="Singing">Singing<br/><br/>
+            
+            City : <select name="city">
+                <option value="-1" selected >---Select City----</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="surat">surat</option>
+                <option value="Rajkot">rajkot</option>
+            </select><br/><br/>
+            
+            <input type="submit" value="submit">
+        </form>
+        
+         <script>
+            function ValidateForm() {
+               
+
+             nam = frm.name.value
+            mob = frm.mobile.value
+
+            if (nam == "" || nam == null) {
+                alert(" Enter Your Name");
+                frm.name.focus();
+                return false;
+            }
+
+            else if (mob == "" || mob == null) {
+                alert("Enter  Mobile Number");
+                frm.mobile.focus();
+                return false;
+            }
+
+            else if (isNaN(mob)) {
+                alert("Enter Digite only");
+                return false;
+            }
+
+            else if (document.frm.gender[0].checked == false && document.frm.gender[1].checked == false) {
+                alert("select your gender...");
+                return false;
+            }
+
+            else if (document.frm.hobby[0].checked == false && document.frm.hobby[1].checked == false && document.frm.hobby[2].checked == false) {
+                alert(" Select Your Hobby....");
+                return false;
+            }
+
+            else if (document.frm.city.value == -1) {
+                alert(" Select Your City....")
+                return false;
+            }
+
+
+        }
+
+         </script>
+    </body>
+</html>
+
+
+
+
+

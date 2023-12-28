@@ -1,0 +1,22 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form id="form">
+           value: <input type="text"  name="txt">
+            <button onclick="myfuction()" value="check">Show</button>
+        </form>
+        <script>
+            function myfuction(){
+            a1 = form.txt.value;
+            if (a1 == "a" || a1 == "e" || a1 == "i" || a1 == "o" || a1 == "u") {
+                document.write("Vowel"+a1);
+            } else {
+                document.write("consonant"+a1);
+            }
+        }
+        </script>
+
+    </body>
+</html>

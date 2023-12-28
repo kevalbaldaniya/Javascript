@@ -1,0 +1,116 @@
+<html>
+    <body>
+        <form name="frm" onsubmit="return ValidateForm()">
+            
+           
+            Enter Name :<input type="text" name="name"><label id="demo" ></label><br><br>
+
+            
+            Enter Mobaile No : <input type="text" name="mobile"><label id="demo1"></label><br/><br/>
+            
+             
+            Gender : <input type="radio" name="gender" value="M">Male
+            <input type="radio" name="gender" value="F">Female<label id="demo2"></label><br/><br/>
+        
+            Hobby : <input type="checkbox" name="hobby" value="Reading">Reading
+            <input type="checkbox" name="hobby" value="Dancing">Dancing
+            <input type="checkbox" name="hobby" value="Singing">Singing<label id="demo3"></label><br/><br/>
+            
+            City : <select name="city">
+                <option value="-1" selected >---Select City----</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="surat">surat</option>
+                <option value="Rajkot">rajkot</option>
+            </select><label id="demo4"></label><br/><br/>
+            
+            <input type="submit" value="submit">
+        </form>
+        
+         <script>
+            function ValidateForm() {
+               
+
+             nam = frm.name.value
+             mob = frm.mobile.value
+             
+
+            if (nam == "" || nam == null) {
+               var c = document.getElementById("demo");
+                 c.innerHTML = "<i>*Enter Name</i>"
+                 c.style.color = "red";
+                frm.name.focus();
+                return  false;
+            }
+
+            else {
+                var v = document.getElementById("demo");
+                 v.innerHTML = " "
+    
+            }
+
+
+             if (mob == "" || mob == null) {
+               var x = document.getElementById("demo1");
+                x.innerHTML = "<i>*Enter  Mobile Number</i>"
+                x.style.color = "red";
+                frm.mobile.focus();
+                return false;
+            }
+             
+           
+
+           else  if  (isNaN(mob)) {
+                d=document.getElementById("demo1");
+                d.innerHTML = "<i> *Enter Digite only</i>"
+                d.style.color = "red";
+                frm.mobile.focus();
+                return false;
+            }
+
+           else {
+            m=document.getElementById("demo1");
+                m.innerHTML = " "
+            
+            }
+
+             if (document.frm.gender[0].checked == false && document.frm.gender[1].checked == false) {
+                 y = document.getElementById("demo2");
+                 y.innerHTML = "<i> *select your gender...</i>"
+                 y.style.color = "red";               
+                return false;
+            }
+
+           else {
+            p = document.getElementById("demo2");
+                 p.innerHTML = " "
+            }
+
+             if (document.frm.hobby[0].checked == false && document.frm.hobby[1].checked == false && document.frm.hobby[2].checked == false) {
+                var z = document.getElementById("demo3");
+                z.innerHTML = "<i> *Select Your Hobby....</i>"
+                z.style.color = "red";
+                return false;
+            }
+            else{
+                var z = document.getElementById("demo3");
+                z.innerHTML = " "
+                
+            }
+
+             if (document.frm.city.value == -1) {
+                var p = document.getElementById("demo4");
+                p.innerHTML = "<i> *Select Your City....</i>"
+                p.style.color = "red";
+                return false;
+            }
+
+        }
+
+         </script>
+    </body>
+</html>
+
+
+
+
+

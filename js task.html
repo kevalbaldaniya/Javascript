@@ -1,0 +1,86 @@
+<html>
+<head>
+    <script>//5.Take 3 numbers and find greatest number using nested IF….ELSE statement.
+        n1 = 50;
+        n2 = 70;
+        n3 = 60;
+
+        if (n1 > n2) {
+            if (n1 > n3) {
+                document.write("n1 greatest number  " );
+            } else {
+                document.write("n3 greatest number  " );
+            }
+        } else  if (n2 > n3) {
+            document.write("n2 greatest number " );
+            } else {
+                document.write("n3 greatest number " );
+            }
+
+    </script><br><br>
+
+
+
+    <script>//6.Take 3 numbers and find smallest number using logical operator
+        n1 = 50;
+        n2 = 15;
+        n3 = 20;
+        if (n1 < n2 && n1 < n3) {
+            document.write("n1 is smallest numbar");
+        } else if (n2 < n1 && n2 < n3) {
+            document.write("n2 is smallest numbar");
+        } else {
+            document.write("n3 is smallest numbar");
+        }
+    </script><br><br>
+
+
+    <script>//7.Take a number and find factorial of that number.
+        n1 = 4;
+        fact=1
+        for (i = 1; i <= n1; i++) {
+            fact = fact * i;
+        }
+        document.write("fact is:", fact);
+
+    </script><br><br>
+
+
+    <script>//8.Write a program to swap 2 numbers using third variable.
+        num1 = 10;
+        num2 = 15;
+        
+        let temp = num1;
+            num1 = num2;
+            num2 = temp;
+
+            document.write("numbar 1",num1,"<br>");
+            document.write("numbar 2",num2);
+
+
+    </script><br><br>
+
+    <script>//9.Take a number. Generate multiplication table of that number.
+     n1 = 15;
+      for (i=1; i<=10; i++){
+        c = n1*i;
+      }
+      document.write(n1,"*",i,"=",c);
+
+    </script><br><br>
+
+
+    <script>//10.Take a number and calculate sum of natural numbers.
+         n1 = 4;
+        natural=0
+        for (i = 1; i <= n1; i++) {
+            natural = natural + i;
+        }
+        document.write("natural is:", natural);
+    </script>
+
+
+</head>
+<body>
+</body>
+</html>

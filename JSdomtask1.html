@@ -1,0 +1,23 @@
+
+<html>
+<body>
+   First Name <input type="text" name="First name" id="First"><br><br>
+
+    Middle Name <input type="text" name="Middle name" id="Middle"><br><br>
+
+   Last Name <input type="text" name="Last name" id="Last"><br><br>
+
+    <input type="Button" Value="Click Me" onclick="function1()">
+
+    <script>
+        function function1(){
+           a = document.getElementById("First").value
+           b= document.getElementById("Middle").value
+           c= document.getElementById("Last").value
+           ans = a + " " + b + " " + c ;
+           alert("Full Name :" + ans);
+
+        }
+    </script>
+</body>
+</html>
